@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Form 2020</title>
+		<link rel="stylesheet" type="text/css" href="D:\Programming Languages\JavaScript Projects\Form 2020 with Elemenet Print\main.css">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet"> -->
+	</head>
+	<body onload="load()">
+		<!-- onload="load()" -->
+		<h1 class="tit"><u>-:Form 2020:-</u></h1>
+		<hr style="height: 2px;background-color: black;">
+			<div class="name">
+				<h3 class="nametit">Name:-</h3>
+				<input type="text" id="firna" class="firstin" placeholder="First Name">
+				<input type="text" id="fatna" class="fathin" placeholder="Father's Name">
+				<input type="text" id="surna" class="surin" placeholder="Surname">
+			</div>
+			<br><br><br>
+			<div class="age">
+				<h3 class="agetit">Age:-</h3>
+				<input type="Number" id="age" class="agein" placeholder="Age in Number">
+				<h3 id="age2" name="age4"></h3>
+			</div>
+			<div class="birthdate">
+				<h3 class="birtit">Birthdate:-</h3>
+				<input class="birin" id="birthdate" type="date">
+			</div>
+			<div class="cast">
+				<h3 class="castit">Cast:-</h3>
+				<select class="castopt" id="cast">
+					<option>--SELECT--</option>
+					<option>OBC</option>
+					<option>SC</option>
+					<option>ST</option>
+					<option>OTHER</option>
+				</select>
+			</div>
+			<div class="loc">
+				<h3 class="loctit">Country:-</h3>
+				<input type="text" class="locin" placeholder="Country" id="country">
+			</div>
+			<div class="state">
+				<h3 class="stttin">State:-</h3>
+				<input type="text" id="state" placeholder="State" class="sttin">
+			</div>
+			<div class="phone">
+				<h3>Phone Number:-</h3>
+				<p class="pn91">+91</p><input type="text" id="phoneNumber1" placeholder="Phone Number" class="phonein">
+			</div>
+			<div class="phone2">
+				<h3 class="ph2tit">Home Phone Number:-</h3>
+				<p class="pn92">+91</p><input type="text" id="phoneNumber2" placeholder="Phone Number" class="phonein2">
+			</div>
+			<div class="Add">
+				<h3 class="addtit">Address:-</h3>
+				<input id="address" value="Junagadh" placeholder="Address" class="addin">
+			</div>
+			<div class="email">
+				<h3 class="emailtit">E-mail Address:-</h3>
+				<input class="emailin" id="emailId" placeholder="Email Address">
+				<select class="emailopt" id="emailId2">
+					<option>@gmail.com</option>
+					<option>@yahoo.com</option>
+					<option>@hotmail.com</option>
+					<option class="emailopt_1">@other(Define in box)</option>
+				</select>
+			</div>
+			<div class="hobby">
+				<h3 class="hobtit">Hobby:-</h3>
+				<input class="hobin" placeholder="Hobby" id="hobby" type="text">
+			</div>
+			<div class="Submit">
+				<button id="subbutton" class="subbut" onclick="btn()">Submit</button>
+			</div>
+			<div class="link">
+				<a class="linka" href="D:\Projects\temprature\main001.html">Check out Our Temperature Project</a>
+			</div>
+			<center><p id="thank" class="thankshide">Thanks For visiting Us.</p></center>
+			<div class="rm" id="responsemain">
+				<p>ABOUT YOU:</p><hr>
+				<div id="response">
+					<p class="response" id="RFirstName"></p>
+					<p class="response" id="RFatherName"></p>
+					<p class="response" id="RSurname"></p>
+					<p class="response" id="RFullName"></p>
+					<p class="response" id="RAge"></p>
+					<p class="response" id="RBirthDate"></p>
+					<p class="response" id="RCast"></p>
+					<p class="response" id="RCounty"></p>
+					<p class="response" id="RState"></p>
+					<p class="response" id="RPhoneNumber"></p>
+					<p class="response" id="RHomePhoneNumber"></p>
+					<p class="response" id="RAddress"></p>
+					<p class="response" id="REmail"></p>
+					<p class="response" id="RHobby"></p>
+				</div>
+			</div>
+			<script type="text/javascript" src="D:\Programming Languages\JavaScript Projects\Form 2020 with Elemenet Print\main2.js"></script>
+			<script type="text/javascript" src="D:\Programming Languages\JavaScript Projects\Form 2020 with Elemenet Print\main.js"></script>
+	</body>
+</html>

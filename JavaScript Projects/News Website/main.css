@@ -1,0 +1,26 @@
+.custom{
+	display: block;
+}
+
+.customTit{
+	font-weight: 500;
+}
+
+.customButton{
+	margin-top: 4px;
+	margin-left: 5px;
+	width: 70px;
+	text-align: center;
+	height: 30px;
+}
+
+.refreshMain{
+	width: 30px;
+}
+.refreshMain:hover{
+	transition: 0.6s;
+	width: 40px;
+}
+.refreshMain{
+	transition: 0.6s;
+}

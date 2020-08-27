@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Form 2020
+	</title>
+	<!-- <link rel="stylesheet" type="text/css" href="D:\Projects\Form 2020\main.css"> -->
+	<!-- <style rel="stylesheet" type="text/css" src="D:\Projects\Form 2020\main.css"></style> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet"> -->
+	<style type="text/css">
+				body{
+			width: 50%
+			height: 10px;
+			background-color: #0066FF;
+			font-family: 'Ubuntu', sans-serif;
+			color: White;
+			border-radius: 30px;
+			transition: 2s;
+		}
+		*{
+			margin-top: 10px;
+		}
+		.tit{
+			font-size: 60px;
+			display: flex;
+			justify-content: center;
+			user-select: all;
+		}
+		
+		.name{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.firstin,
+		.fathin,
+		.surin{
+			width: 200px;
+			height: 30px;
+			margin: 15px 30px;
+			margin-bottom: 0px;
+			color: black;
+			font-size: 15px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.firstin:focus,
+		.fathin:focus,
+		.surin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.firstin,
+		.fathin,
+		.surin,
+		.agein,
+		.placeholder{
+			text-align: center;
+		}
+		.nametit{
+			margin-bottom: 1px;
+		}
+		.age{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.agein{
+			width: 120px;
+			height: 30px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.agein:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.agetit{
+			margin-top: 1px;
+		}
+		.birthdate{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.birtit{
+			margin-top: 1px;
+		}
+		.birin{
+			width: 140px;
+			height: 30px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.birin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.cast{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.castit{
+			margin-top: 1px;
+		}
+		.castopt{
+			width: 100px;
+			height: 30px;
+			margin-left: 30px;
+			margin-top: 1px;
+			margin-bottom: 14px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.castopt:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.Submit{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.subbut{
+			width: 70px;
+			height: 30px;
+			color: gray;
+			border: 10px solid rgba(0,0,0,1)
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 0px;
+			align-content: center;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			border-radius: 50%;
+		}
+		.subbut:hover{
+			color: white;
+			font-weight: 300;
+			background-color: rgba(200,0,0,0.6);
+			border: 1px solid lightgreen;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			transition: 0.6s;
+			animation: animate 1s infinite	;
+		}
+		
+		@keyframes animate{
+			0%{
+				transition: 0.1s;
+				border: 1px solid lightgreen;
+				background-color: Red;
+				opacity: 1;
+				color: white;
+				font-size: 15px;
+				color: rgba(0,0,0,1);
+				width: 71px;
+				height: 31px;
+			}
+			10%{
+				transition: 0.2s;
+				background-color: Red;
+				color: white;
+				opacity: 0.9;
+				font-size: 16px;
+				color: rgba(0,0,0,0.9);
+				width: 72px;
+				border: 1px solid lightgreen;
+				height: 32px;
+			}
+			20%{
+				border: 1px solid lightgreen;
+				transition: 0.3s;
+				background-color: Red;
+				color: white;
+				opacity: 0.8;
+				font-size: 17px;
+				color: rgba(0,0,0,0.7);
+				width: 73px;
+				height: 33px;
+			}
+			30%{
+				background-color: Red;
+				border: 1px solid lightgreen;
+				color: white;
+				transition: 0.3s;
+				opacity: 0.7;
+				font-size: 18px;
+				color: rgba(0,0,0,0.6);
+				width: 74px;
+				height: 34px;
+			}
+			40%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+					border: 1px solid lightgreen;
+				opacity: 0.6;
+				font-size: 19px;
+				color: rgba(0,0,0,0.5);
+				width: 75px;
+				height: 35px;
+			}
+			50%{
+				background-color: Red;
+				color: white;
+				opacity: 0.5;
+				border: 1px solid lightgreen;
+				transition: 0.3s;
+				font-size: 20px;
+				color: rgba(0,0,0,0.5);
+				width: 75px;
+				height: 35px;
+			}
+			60%{
+				background-color: Red;
+				color: white;
+				opacity: 0.5;
+				font-size: 19px;
+				transition: 0.3s;
+				color: rgba(0,0,0,0.6);
+				border: 1px solid lightgreen;
+				width: 74px;
+				height: 34px;
+			}
+			70%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				opacity: 0.4;
+				font-size: 18px;
+				border: 1px solid lightgreen;
+				color: rgba(0,0,0,0.7);
+				width: 73px;
+				height: 33px;
+			}
+			80%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				opacity: 0.3;
+				border: 1px solid lightgreen;
+				font-size: 17px;
+				color: rgba(0,0,0,0.8);
+				width: 72px;
+				height: 32px;
+			}
+			90%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				opacity: 0.2;
+				border: 1px solid lightgreen;
+				font-size: 16px;
+				color: rgba(0,0,0,0.9);
+				width: 71px;
+				height: 31px;
+			}
+			100%{
+				background-color: Red;
+				color: white;
+				transition: 0.3s;
+				border: 1px solid lightgreen;
+				opacity: 0.1;
+				font-size: 15px;
+				color: rgba(0,0,0,1);
+				width: 70px;
+				height: 30px;
+			}
+		}
+		.markm{
+			background-color: #005ce6;
+			width: 100%;
+			height: 30px;
+			font-size: 25px;
+			color: Yellow;
+			text-shadow: 2px 5px 1px rgba(0,0,0,0.9)
+		}
+		.loc{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.locin{
+			width: 100px;
+			height: 20px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			margin-bottom: 8px;
+			align-content: center;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.locin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.phone{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.phone2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 5px;
+		}
+		.phonein{
+			width: 130px;
+			height: 20px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			margin-left: 5px;
+			margin-bottom: 8px;
+			align-content: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		.pn91{
+			margin-left: 16px;
+			font-size: 19px;
+			margin-top: 15px;
+			font-weight: 600;
+		}
+		.pn92{
+			margin-left: 16px;
+			font-size: 19px;
+			margin-top: 15px;
+			font-weight: 600;
+		}
+		.phonein2{
+			width: 130px;
+			height: 20px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-left: 5px;
+			margin-top: 5px;
+			margin-bottom: 10px;
+			align-content: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		.ph2tit{
+			margin-top: 0px;
+			margin-bottom: 8px;
+		}
+		.phonein:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.phonein2:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.link{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.linka{
+			font-size: 20px;
+			color: Orange;
+			text-decoration: none;
+			text-shadow: 10px 7px 2px rgba(0,0,0,0.3);
+			margin-left: 20px;
+
+		}
+		.linka:hover{
+			cursor: pointer;
+			color: white;
+			text-shadow: 10px 7px 1px rgba(0,0,0,0.6);
+			transition: 0.5s;
+		}
+		.linka{
+			transition: 0.5s;
+		}
+		.Add{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.addin{
+			width: 200px;
+			height: 50px;
+			margin-left: 40px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			font-size: 10px;
+		}
+		.addin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.addtit{
+			margin-top: 27px;
+		}
+		.addin,
+		.placeholder{
+			text-align: center;
+			font-size: 20px;
+		}
+		.email{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.emailtit{
+			margin-top: 30px;
+		}
+		.emailin{
+			margin-left: 40px;
+			flex-wrap: wrap;
+			width: 180px;
+			height: 24px;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.emailin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);	
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.emailopt{
+			width: 110px;
+			height: 25px;
+			margin-left: 20px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.emailopt:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.state{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.sttin{
+			width: 90px;
+			margin-left: 25px;
+			height: 22px;
+			margin-top: 0px;
+			font-size: 15px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		.sttin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.hobby{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.hobtit{
+
+		}
+		.hobin{
+			margin-left: 30px;
+			margin-top: 1px;
+			width: 7rem;
+			height: 20px;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			font-size: 15px;
+		}
+		.hobin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.waterMark{
+			display: fixed;
+		}
+	</style>
+	</head>
+<body onload="load()">
+	<!-- onload="load()" -->
+	<h1 class="tit"><u>-:Form 2020:-</u></h1>
+	<div class="name">
+		<h3 class="nametit">Name:-</h3>
+		<input type="text" id="firna" class="firstin" placeholder="First Name">
+		<input type="text" id="fatna" class="fathin" placeholder="Father's Name">
+		<input type="text" id="surna" class="surin" placeholder="Surname">
+	</div>
+	<br><br><br>
+	<div class="age">
+		<h3 class="agetit">Age:-</h3>
+		<input type="Number" id="age" class="agein" placeholder="Age in Number">
+		<h3 id="age2" name="age4"></h3>
+	</div>
+	<div class="birthdate">
+		<h3 class="birtit">Birthdate:-</h3>
+		<input class="birin" id="birthdate" type="date">
+	</div>
+	<div class="cast">
+		<h3 class="castit">Cast:-</h3>
+		<select class="castopt" id="cast">
+			<option>--SELECT--</option>
+			<option>OBC</option>
+			<option>SC</option>
+			<option>ST</option>
+			<option>OTHER</option>
+		</select>
+	</div>
+	<div class="loc">
+		<h3 class="loctit">Country:-</h3>
+		<input type="text" class="locin" placeholder="Country" id="country">
+	</div>
+	<div class="state">
+		<h3 class="stttin">State:-</h3>
+		<input type="text" id="state" placeholder="State" class="sttin">
+	</div>
+	<div class="phone">
+		<h3>Phone Number:-</h3>
+		<p class="pn91">+91</p><input type="text" id="phoneNumber1" placeholder="Phone Number" class="phonein">
+	</div>
+	<div class="phone2">
+		<h3 class="ph2tit">Home Phone Number:-</h3>
+		<p class="pn92">+91</p><input type="text" id="phoneNumber2" placeholder="Phone Number" class="phonein2">
+	</div>
+	<div class="Add">
+		<h3 class="addtit">Address:-</h3>
+		<input id="address" placeholder="Address" class="addin">
+	</div>
+	<div class="email">
+		<h3 class="emailtit">E-mail Address:-</h3>
+		<input class="emailin" id="emailId" placeholder="Email Address">
+		<select class="emailopt" id="emailId2">
+			<option>@gmail.com</option>
+			<option>@yahoo.com</option>
+			<option>@hotmail.com</option>
+			<option class="emailopt_1">@other(Define in box)</option>
+		</select>
+	</div>
+	<div class="hobby">
+		<h3 class="hobtit">Hobby:-</h3>
+		<input class="hobin" placeholder="Hobby" id="hobby" type="text">
+	</div>
+	<div class="Submit">
+		<button id="subbutton" class="subbut" onclick="btn()">Submit</button>
+	</div>
+	<div class="link">
+		<a class="linka" href="D:\Projects\temprature\main001.html">Check out Our Temperature Project</a>
+	</div>
+	<!-- <div class="watermark">
+		<h2 class="waterMark">Made By HENIL</h2>
+	<div> -->
+	<script type="text/javascript">
+		console.log("This is form 2020");
+
+function load(){
+	console.log("=>  If you Want To Print Your Form Here: 1. Fill The form 2. Click on Submit Button   <=")
+}
+
+function btn(){
+	nameOutput()
+	//Name
+	function nameOutput(){
+	var firstName = firna.value;
+	var fatherName = fatna.value;
+	var surName  = surna.value;
+	var mainName = firstName + " " + fatherName + " " + surName;
+	if (firstName, fatherName, surName==="") {
+		console.error("You Haven't add the NAME")
+		ageOutput()
+	} else {
+		console.log("Your Full Name is :- ", mainName);
+		ageOutput()
+	}
+		firstName = "";
+		fatherName = "";
+		surName = "";
+	}
+	//Age
+	function ageOutput(){
+		var Age = age.value;
+		if (Age<18 || Age<0) {
+			console.error("Your Age is not sufficient!!!");
+			birthDateOutput();
+		} else {
+			console.log("Your Age is:- ", Age)
+			birthDateOutput();
+		}
+	}
+	//Birth Date
+	function birthDateOutput(){
+		var birthDate = birthdate.value;
+		if (birthDate=="") {	
+			console.error("You haven't Add your Birth Date!!!")
+			castOutput()
+		} else {
+			console.log("Your Birthdate is:- ", birthDate);
+			castOutput();
+		}
+	}
+	function castOutput(){
+		var Cast = cast.value;
+		if (Cast=="--SELECT--") {
+			console.error("You havn't choose Your Cast!!!");
+			locationOutput()
+		} else {
+			console.log("Your Cast is:- ", Cast);
+			locationOutput()
+		}
+	}
+	function locationOutput(){
+		var Loca = country.value;
+		if (Loca=="") {
+			console.error("You havn't add Your Country!!!")
+			stateOutput()
+		} else {
+			console.log("Your Country IS:- ", Loca);
+			stateOutput()
+		}
+	}
+	function stateOutput(){
+		var State = state.value;
+		if (State=="") {
+			console.error("You havn't add Your State!!!");
+			phoneNumberOutput1();
+		} else {
+			console.log("Your State is:- ", State)
+			phoneNumberOutput1();
+		}
+	}
+	function phoneNumberOutput1(){
+		var PhoneNumber1 = phoneNumber1.value;
+		if (PhoneNumber1=="") {
+			console.error("You havn't add your phone number!!!");
+			phoneNumberOutput2();
+		} else {
+			if (PhoneNumber1.length < 10) {
+				console.error("Your Phone Number length is not sufficient!!!")
+				phoneNumberOutput2();
+			} else {
+				if (PhoneNumber1.length > 10) {
+					console.error("Your Phone Number length is not sufficient!!!")
+					phoneNumberOutput2();
+				} else {
+					console.log("Your Phone number is:- ", PhoneNumber1)
+					phoneNumberOutput2();
+				}
+			}
+		}
+	}
+	function phoneNumberOutput2(){
+		var PhoneNumber2 = phoneNumber2.value;
+		if (PhoneNumber2=="") {
+			console.error("You Havn't add Your Home Phone Number!!!");
+			addressOutput();
+		} else {
+			console.log("Your Home Phone Number is:- ", PhoneNumber2);
+			addressOutput();
+		}
+	}
+	function addressOutput(){
+		var Address = address.value;
+		if (Address=="") {
+			console.error("You Havn't Add Your Address!!!")
+			emailIdOutput();
+		} else {
+			console.log("Your Address is:- ", Address)
+			emailIdOutput();
+		}
+	}
+	function emailIdOutput(){
+		var EmailId = emailId.value;
+		var EmailId2 = emailId2.value;
+		if (EmailId=="") {
+			console.error("You haven't add Your E-mail Id!!!");
+			hobbyOutput();
+		} else {
+			if (EmailId2=="@other(Define in box)") {
+				console.log("Your E-mail id is:- ", EmailId);
+				hobbyOutput();
+			} else {
+				console.log("Your E-mail Id is:- ", EmailId + EmailId2);
+				hobbyOutput();
+			}
+		}
+	}
+	function hobbyOutput(){
+		var Hobby = hobby.value;
+		if (Hobby=="") {
+			console.error("You haven't add Your Hobby!!!");
+		} else {
+			console.log("Your Hobby is:-", Hobby);
+		}
+	}
+}
+	</script>
+</body>
+</html>

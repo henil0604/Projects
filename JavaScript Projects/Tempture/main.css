@@ -1,0 +1,104 @@
+body{
+	background-color: rgba(0,0,300,0.8);
+	color: white;
+	transition: 1s;
+}
+.mainTitle{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tit{
+	font-size: 40px;
+	margin: 0;
+	letter-spacing: 3px;
+}
+.hr1{
+	height: 4px;
+	background-color: white;
+}
+.celciusC{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.celciusTit{
+	font-weight: 600;
+	font-size: 20px;
+}
+.celciusInput{
+	text-align: center;
+	width: 100px;
+	margin: 0;
+	color: black;
+	margin-left: 15px;
+	height: 23px;
+	font-size: 18px;
+	box-shadow: 8px 5px 3px rgba(0,0,0,0.3);
+}
+.celciusInput:focus{
+	transition: 1s;
+	box-shadow: 8px 5px 3px rgba(0,0,0,0.3);
+	color: red;
+	font-size: 20px;
+	width: 110px;
+	height: 25px;
+	border-radius: 10px;
+}
+.celciusInput{
+	transition: 1s;
+}
+.feranhitF{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.feranhitTit{
+	font-weight: 600;
+	font-size: 20px;
+}
+.feranhitInput{
+	text-align: center;
+	width: 100px;
+	margin: 0;
+	color: black;
+	margin-left: 15px;
+	height: 23px;
+	font-size: 18px;
+	box-shadow: 8px 5px 3px rgba(0,0,0,0.3);
+}
+.feranhitInput:focus{
+	transition: 1s;
+	box-shadow: 8px 5px 3px rgba(0,0,0,0.3);
+	color: red;
+	font-size: 20px;
+	width: 110px;
+	height: 25px;
+	border-radius: 10px;
+}
+.feranhitInput{
+	transition: 1s;
+}
+.btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btnmain{
+	width: 130px;
+	height: 50px;
+	border-radius: 23px;
+	margin: 20px;
+	font-weight: 600;
+}
+.btnmain:hover{
+	transition: 1s;
+	width: 110px;
+	height: 55px;
+	border: 3px solid red;
+	color: red;
+}
+.btnmain{
+	transition: 1s;
+}

@@ -1,0 +1,499 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>World News</title>
+    <style type="text/css">
+      .custom{
+        display: block;
+      }
+
+      .customTit{
+        font-weight: 500;
+      }
+      
+      .customButton{
+        margin-top: 4px;
+        margin-left: 5px;
+        width: 70px;
+        text-align: center;
+        height: 30px;
+      }
+
+      .refreshMain{
+        width: 30px;
+      }
+      .refreshMain:hover{
+        transition: 0.6s;
+        width: 40px;
+      }
+      .refreshMain{
+        transition: 0.6s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Welcome to World News</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="main2.html">Custom News</a>
+          </li>
+        </ul>
+       </div>
+    </nav>
+    <div class="container my-3">
+      <span>-Made by Henil Malaviya</span>
+      <h3>Top News: <span class="badge badge-secondary">World News</span></h3>
+      <hr>
+      <div id="refrash">
+        <a onclick="newsA(), newsB(), newsC(), newsD(), newsE(), newsF()" alt="Refresh">
+          <img class="refreshMain" src="refresh.png">
+        </a>
+      </div>
+      <h2><u>Science News:</u></h2><div class="accordion" id="loading1"></div>
+      <div class="accordion" id="newsAccordian">
+      </div>
+      <br>
+      <h2><u>Healh News:</u></h2><div id="loading2"></div>
+      <div class="accordion" id="newsAccordian2">
+      </div>
+      <br>
+      <h2><u>Technology News:</u></h2><div id="loading3"></div>
+      <div class="accordion" id="newsAccordian3">
+      </div>
+      <br>
+      <h2><u>Sports News:</u></h2><div id="loading4"></div>
+      <div class="accordion" id="newsAccordian4">
+      </div>
+      <br>
+      <h2><u>Business News:</u></h2><div id="loading5"></div>
+      <div class="accordion" id="newsAccordian5">
+      </div>
+      <br>
+      <a href="main2.html">Custom News</a>
+      
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      console.log("WELCOME TO WORLD NEWS")
+      let website = `https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=4e22589fc4ec4b18bd46a08505a59da8`
+      let newsAccordian = document.getElementById('newsAccordian')
+      newsA()
+
+      //get Request
+      function newsA(){
+        console.clear()
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', `${website}`, true);
+        //On Progress
+
+        xhr.onprogress = function(){
+          console.log("Your Science News Is Fetching")
+          let spin = ``
+          let newsAccordian = document.getElementById('newsAccordian')
+          let spinHtml = `
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          `
+          spin += spinHtml
+          newsAccordian.innerHTML = spin
+        }
+
+        //ON LOAD
+
+        xhr.onload = function (){
+          if (this.status === 200) {
+            let json = JSON.parse(this.responseText)
+
+            let articles = json.articles;
+
+            console.log(articles)
+
+            let newsHtml = "";
+            articles.forEach(function (element, index){
+
+
+                let news =`
+                  <div class="card">
+                    <div class="card-header" id="heading${index}">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link show" type="button" id="mainTxtTit" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                        => ${element["title"]}
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordian">
+                      <div class="card-body">
+                        <p id="mainTxt">${element["content"]}. <a href="${element["url"]}" target="_blank">Read More Here</a></p>
+                      </div>
+                    </div>
+                  </div>
+                `
+                newsHtml += news;
+            })
+            newsAccordian.innerHTML = newsHtml;
+          }
+          else{
+            console.log('some thing went Wrong')
+          }
+        }
+        xhr.send()
+      }
+    </script>
+    <script type="text/javascript">
+      let website2 = `https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=4e22589fc4ec4b18bd46a08505a59da8`
+      // https://newsapi.org/v2/top-headlines?sources=bbc-news&apikey=4e22589fc4ec4b18bd46a08505a59da8
+      let newsAccordian2 = document.getElementById('newsAccordian2')
+      newsB()
+      //get Request
+      function newsB(){
+        console.clear()
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open('GET', `${website2}`, true);
+        //On progress
+
+        xhr2.onprogress = function(){
+          console.log("Your Health news is Fetching...")
+          let spin2 = ``
+          let newsAccordian2 = document.getElementById('newsAccordian2')
+          let spinHtml2 = `
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          `
+          spin2 += spinHtml2
+          newsAccordian2.innerHTML = spin2
+        }
+
+        //ON LOAD
+
+        xhr2.onload = function (){
+          if (this.status === 200) {
+            let json2 = JSON.parse(this.responseText)
+
+            let articles2 = json2.articles;
+
+            console.log(articles2)
+
+            let newsHtml2 = "";
+            articles2.forEach(function (element, index){
+                let news2 =`
+                  <div class="card">
+                    <div class="card-header" id="heading${index}">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link show" type="button" id="mainTxtTit" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                        => ${element["title"]}
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordian">
+                      <div class="card-body">
+                        <p id="mainTxt">${element["content"]}. <a href="${element["url"]} target="_blank">Read More Here</a></p>
+                      </div>
+                    </div>
+                  </div>
+                `
+                newsHtml2 += news2;
+            })
+            newsAccordian2.innerHTML = newsHtml2;
+          }
+          else{
+            console.log('some thing went Wrong')
+          }
+        }
+
+        xhr2.send()
+      }
+    </script>
+    <script type="text/javascript">
+      let website3 = `https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=4e22589fc4ec4b18bd46a08505a59da8`
+// https://newsapi.org/v2/top-headlines?sources=bbc-news&apikey=4e22589fc4ec4b18bd46a08505a59da8
+let newsAccordian3 = document.getElementById('newsAccordian3')
+newsC()
+//get Request
+function newsC(){
+  console.clear()
+  const xhr3 = new XMLHttpRequest();
+  xhr3.open('GET', `${website3}`, true);
+
+  //On progress
+
+  xhr3.onprogress = function(){
+    console.log("Your Technology news is Fetching...")
+    let spin3 = ``
+    let newsAccordian3 = document.getElementById('newsAccordian3')
+    let spinHtml3 = `
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    `
+    spin3 += spinHtml3
+    newsAccordian3.innerHTML = spin3
+  }
+
+  //ON LOAD
+
+  xhr3.onload = function (){
+    if (this.status === 200) {
+      let json3 = JSON.parse(this.responseText)
+
+      let articles3 = json3.articles;
+
+      console.log(articles3)
+
+      let newsHtml3 = "";
+      articles3.forEach(function (element, index){
+
+
+          let news3 =`
+            <div class="card">
+              <div class="card-header" id="heading${index}">
+                <h2 class="mb-0">
+                  <button class="btn btn-link show" type="button" id="mainTxtTit" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                  => ${element["title"]}
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordian">
+                <div class="card-body">
+                  <p id="mainTxt">${element["content"]}. <a href="${element["url"]} target="_blank">Read More Here</a></p>
+                </div>
+              </div>
+            </div>
+          `
+          newsHtml3 += news3;
+      })
+      newsAccordian3.innerHTML = newsHtml3;
+    }
+    else{
+      console.log('some thing went Wrong')
+    }
+  }
+
+  xhr3.send()
+}
+    </script>
+    <script type="text/javascript">
+      let website4 = `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=4e22589fc4ec4b18bd46a08505a59da8`
+let newsAccordian4 = document.getElementById('newsAccordian4')
+newsD()
+//get Request
+function newsD(){
+  console.clear()
+  const xhr4 = new XMLHttpRequest();
+  xhr4.open('GET', `${website4}`, true);
+  //On progress
+
+  xhr4.onprogress = function(){
+    console.log("Your Sports news is Fetching...")
+    let spin4 = ``
+    let newsAccordian4 = document.getElementById('newsAccordian4')
+    let spinHtml4 = `
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    `
+    spin4 += spinHtml4
+    newsAccordian4.innerHTML = spin4
+  }
+
+  //ON LOAD
+
+  xhr4.onload = function (){
+    if(this.status === 200) {
+      let json4 = JSON.parse(this.responseText)
+
+      let articles4 = json4.articles;
+
+      console.log(articles4)
+
+      let newsHtml4 = "";
+      articles4.forEach(function (element, index){
+
+
+          let news4 =`
+            <div class="card">
+              <div class="card-header" id="heading${index}">
+                <h2 class="mb-0">
+                  <button class="btn btn-link show" type="button" id="mainTxtTit" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                  => ${element["title"]}
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordian">
+                <div class="card-body">
+                  <p id="mainTxt">${element["content"]}. <a href="${element["url"]} target="_blank">Read More Here</a></p>
+                </div>
+              </div>
+            </div>
+          `
+          newsHtml4 += news4;
+      })
+      newsAccordian4.innerHTML = newsHtml4;
+    }
+    else{
+      console.log('some thing went Wrong')
+    }
+  }
+
+  xhr4.send()
+}
+    </script>
+    <script type="text/javascript">
+      let website5 = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=4e22589fc4ec4b18bd46a08505a59da8`
+let newsAccordian5 = document.getElementById('newsAccordian5')
+newsE()
+//get Request
+
+function newsE(){
+  console.clear()
+  const xhr5 = new XMLHttpRequest();
+  xhr5.open('GET', `${website5}`, true);
+  //On progress
+
+  xhr5.onprogress = function(){
+    console.log("Your Business news is Fetching...")
+    let spin5 = ``
+    let newsAccordian5 = document.getElementById('newsAccordian5')
+    let spinHtml5 = `
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    `
+    spin5 += spinHtml5
+    newsAccordian5.innerHTML = spin5
+  }
+
+  //ON LOAD
+
+  xhr5.onload = function (){
+    if(this.status === 200) {
+      let json5 = JSON.parse(this.responseText)
+
+      let articles5 = json5.articles;
+
+      console.log(articles5)
+
+      let newsHtml5 = "";
+      articles5.forEach(function (element, index){
+
+
+          let news5 =`
+            <div class="card">
+              <div class="card-header" id="heading${index}">
+                <h2 class="mb-0">
+                  <button class="btn btn-link show" type="button" id="mainTxtTit" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                  => ${element["title"]}
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordian">
+                <div class="card-body">
+                  <p id="mainTxt">${element["content"]}. <a href="${element["url"]} target="_blank">Read More Here</a></p>
+                </div>
+              </div>
+            </div>
+          `
+          newsHtml5 += news5;
+      })
+      newsAccordian5.innerHTML = newsHtml5;
+    }
+    else{
+      console.log('some thing went Wrong')
+    }
+  }
+
+  xhr5.send()
+}
+    </script>
+    <script type="text/javascript">
+      
+function newsF(){
+  var localURL = localStorage.getItem('url')
+  let urlInput = document.getElementById('urlInput').value
+  urlInput.innerHTML = localURL
+  let website6 = `${urlInput}`
+  if (urlInput=="") {
+    window.alert("Please Input Custom URL First")
+  }
+  else{
+  localStorage.setItem('url', urlInput)
+  const xhr6 = new XMLHttpRequest();
+  xhr6.open('GET', `${website6}`, true);
+
+  //On progress
+
+  xhr6.onprogress = function(){
+    console.log("Your Custom news is Fetching...")
+    let spin6 = ``
+    let newsAccordian6 = document.getElementById('newsAccordian6')
+    let spinHtml6 = `
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    `
+    spin6 += spinHtml6
+    newsAccordian6.innerHTML = spin6
+  }
+
+  //ON LOAD
+
+  xhr6.onload = function (){
+    if (this.status === 200) {
+      let json6 = JSON.parse(this.responseText)
+
+      let articles6 = json6.articles;
+
+      console.log(articles6)
+
+      let newsHtml6 = "";
+      articles6.forEach(function (element, index){
+          let news6 =`
+            <div class="card">
+              <div class="card-header" id="heading${index}">
+                <h2 class="mb-0">
+                  <button class="btn btn-link show" type="button" id="mainTxtTit" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                  => ${element["title"]}
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}" data-parent="#newsAccordian">
+                <div class="card-body">
+                  <p id="mainTxt">${element["content"]}. <a href="${element["url"]} target="_blank">Read More Here</a></p>
+                </div>
+              </div>
+            </div>
+          `
+          newsHtml6 += news6;
+      })
+      newsAccordian6.innerHTML = newsHtml6;
+    }
+    else{
+      console.log('some thing went Wrong')
+    }
+  }
+
+  xhr6.send()
+  }
+}
+    </script>
+  </body>
+</html>

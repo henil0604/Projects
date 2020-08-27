@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encoder and Decoder</title>
+
+    <!-- GetBootStarp Css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- StyleSheet -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            position: fixed;
+            width: 100%;
+        }
+
+        .textInput {
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .div-heading {
+            margin-top: 10px;
+        }
+
+        .typeSelection {
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .typeSelection-select {
+            margin-top: 10px;
+            margin-left: 40px;
+            width: 100px;
+            height: 35px;
+        }
+
+        .convert {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">World Encoder And Decoder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <!-- Main div Named 'Container' -->
+    <div class="container my-3" id="container">
+
+        <!-- MadeBy Div -->
+        <div class="madeBy" id="MadeBy">
+            <h6 class="card-subtitle mb-2 text-muted">-Made By Henil Malaviya</h6>
+        </div>
+        <hr>
+
+        <!-- textInput Div -->
+        <div class="textInput" id="textInput">
+            <h4 class="div-heading" id="textInput-heading">Input <br> Text Here:</h4>
+            <textarea id="textInput-textArea" type="text" class="form-control"
+                style="min-height: 120px; max-height: 300px;" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Enter Your Text Here"></textarea>
+        </div>
+
+        <!-- Selction Div -->
+        <div class="typeSelection" id="typeSelection">
+            <h4 class="div-heading" id="textInput-heading">Type:</h4>
+            <select class="typeSelection-select" id="typeSelection-select">
+                <option value="Encode" class="typeSelection-select" id="typeSelection-select">Encode</option>
+                <option value="Decode" class="typeSelection-select" id="typeSelection-select">Decode</option>
+            </select>
+        </div>
+
+        <!-- convert Button Div -->
+        <div class="convert" id="convert">
+            <button type="button" id="convert-button" class="btn btn-primary" accesskey="c"
+                onclick="convert()">Convert</button>
+        </div>
+        <hr>
+
+        <!-- Output Div -->
+        <div class="output" id="output">
+            <textarea id="output-textArea" type="text" class="form-control"
+                style="min-height: 120px; max-height: 300px;" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm" readonly="" placeholder="Your Output shown here"></textarea>
+        </div>
+
+        <br><br>
+        <hr style="height: 1px; background-color: rgba(0,0,0,0.6);">
+        <center>
+            <h6 class="card-subtitle mb-2 text-muted my-2">Thanks For Visiting Us.</h6>
+            <h6 class="card-subtitle mb-2 text-muted my-2">Supported For UI By <a
+                    href="https://getbootstrap.com/">getbootstrap.com</a></h6>
+            <h6 class="card-subtitle mb-2 text-muted my-2">Give Your <button type="button" onclick="feedbackResponse()"
+                    class="btn btn-secondary btn-sm" id="scroll4">Feedback</button></h6>
+        </center>
+        <div class="feedbackResponseDiv" id="feedbackResponseDiv"></div>
+
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        var inputText = document.getElementById('textInput-textArea')
+        var type = document.getElementById('typeSelection-select')
+        var output = document.getElementById('output-textArea')
+        function convert() {
+            if (type.value == "Encode") {
+                encode()
+            } else {
+                decode()
+            }
+        }
+
+        function encode() {
+            if (inputText.value == "") {
+                window.alert("Please Input some Text!!!")
+            } else {
+                console.info("Encoding Your Text")
+                var Encoderesult = btoa(inputText.value);
+                output.innerText = "Encoding Your Result...";
+                setTimeout(() => {
+                    console.log("Your Encoded Text is: ", Encoderesult);
+                    output.innerText = Encoderesult;
+                }, 1500);
+            }
+        }
+
+        function decode() {
+
+            if (inputText.value == "") {
+                window.alert("Please Input some Text!!!")
+            } else {
+                console.info("Decoding Your Text")
+                var Decoderesult = atob(inputText.value);
+
+                output.innerText = "Decoding Your Result...";
+                setTimeout(() => {
+                    console.log("Your Decoded Text is: ", Decoderesult);
+                    output.innerText = Decoderesult;
+                }, 1500);
+            }
+        }
+
+        function feedbackResponse() {
+            var feedbackResponseDiv = document.getElementById('feedbackResponseDiv')
+            let feedbackResponseDivHTML = `
+          <hr style="height: 1px; background-color: black;">
+          <button type="button" onclick="feedBackClose()" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button> 
+            <h3 class="card-subtitle mb-2 text-muted my-2">Feedback:</h3>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Feedback</span>
+              </div>
+              <textarea id="feedBackInput" type="text" class="form-control" style="min-height: 50px; max-height: 200px; height: 60px;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Your Feedback Here"></textarea>
+              <br><br>
+              <button class="btn btn-primary btn-sm" onclick="feedBackSubmit()">Submit Feedback</button>
+            </div>
+            <br>
+            <h5 id="feedbackResponseValue" class="card-subtitle mb-2 text-muted my-2"></h5>
+            <br>
+            <button type="button" id="scroll2" class="btn btn-primary btn-sm" onclick="lastFeedBack()">Last Feedback</button>
+            <br><br>
+        `
+            feedbackResponseDiv.innerHTML = feedbackResponseDivHTML
+            var scroll2 = document.getElementById('scroll2')
+            scroll2.scrollIntoView({ behavior: 'smooth' })
+        }
+        function feedBackSubmit() {
+            var feedBackInput = document.getElementById('feedBackInput').value
+            var feedbackResponseValue = document.getElementById('feedbackResponseValue')
+            if (feedBackInput == "") {
+                console.error("First Input Feedback")
+            }
+            else if (feedBackInput.length < 3) {
+                console.error("Your Feedback is not sufficient!")
+            }
+            else {
+                feedbackResponseValue.innerHTML = `
+            Your Feedback:- ${feedBackInput}
+          `
+                localStorage.setItem('Feedback', feedBackInput)
+                window.alert("Thanks For Your Feedback")
+            }
+        }
+        function lastFeedBack() {
+            var feedbackResponseValue = document.getElementById('feedbackResponseValue')
+            var lastFeedBackValue = localStorage.getItem('Feedback')
+            if (lastFeedBackValue === null) {
+                lastFeedBackValue = "You had not add any Feedback Last time!"
+            }
+            feedbackResponseValue.innerHTML = `
+          Your Last Feedback was:- ${lastFeedBackValue}
+        `
+        }
+        function feedBackClose() {
+            var feedbackResponseDiv = document.getElementById('feedbackResponseDiv')
+            feedbackResponseDiv.innerHTML = ""
+            let scroll = document.getElementById('MadeBy');
+            scroll.scrollIntoView({ behavior: "smooth" })
+        }
+
+    </script>
+
+
+    <!-- GetbootStrap JavaScrpt -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

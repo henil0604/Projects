@@ -1,0 +1,1133 @@
+<html>
+	<head>
+		<title>Form 2020</title>
+		<style type="text/css">
+					body{
+			width: 50%
+			height: 10px;
+			background-color: #0066FF;
+			font-family: 'Ubuntu', sans-serif;
+			color: White;
+			border-radius: 30px;
+			transition: 2s;
+		}
+		*{
+			margin-top: 10px;
+		}
+		.tit{
+			font-size: 60px;
+			display: flex;
+			justify-content: center;
+			user-select: all;
+		}
+
+		.name{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.firstin,
+		.fathin,
+		.surin{
+			width: 200px;
+			height: 35px;
+			margin: 15px 30px;
+			margin-bottom: 0px;
+			color: black;
+			font-size: 15px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.firstin:focus,
+		.fathin:focus,
+		.surin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.firstin,
+		.fathin,
+		.surin,
+		.agein,
+		.placeholder{
+			text-align: center;
+		}
+		.nametit{
+			margin-bottom: 1px;
+		}
+		.age{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.agein{
+			width: 120px;
+			height: 30px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.agein:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.agetit{
+			margin-top: 1px;
+		}
+		.birthdate{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.birtit{
+			margin-top: 1px;
+		}
+		.birin{
+			width: 140px;
+			height: 30px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.birin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.cast{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.castit{
+			margin-top: 1px;
+		}
+		.castopt{
+			width: 100px;
+			height: 30px;
+			margin-left: 30px;
+			margin-top: 1px;
+			margin-bottom: 14px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.castopt:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.Submit{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.subbut{
+			width: 70px;
+			height: 30px;
+			color: gray;
+			border: 10px solid rgba(0,0,0,1)
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 0px;
+			align-content: center;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			border-radius: 50%;
+		}
+		.subbut:hover{
+			color: white;
+			font-weight: 300;
+			background-color: rgba(200,0,0,0.6);
+			border: 1px solid lightgreen;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			transition: 0.6s;
+			animation: animate 1s infinite	;
+		}
+
+		@keyframes animate{
+			0%{
+				transition: 0.1s;
+				border: 1px solid lightgreen;
+				background-color: Red;
+				opacity: 1;
+				color: white;
+				font-size: 15px;
+				color: rgba(0,0,0,1);
+				width: 71px;
+				height: 31px;
+			}
+			10%{
+				transition: 0.2s;
+				background-color: Red;
+				color: white;
+				opacity: 0.9;
+				font-size: 16px;
+				color: rgba(0,0,0,0.9);
+				width: 72px;
+				border: 1px solid lightgreen;
+				height: 32px;
+			}
+			20%{
+				border: 1px solid lightgreen;
+				transition: 0.3s;
+				background-color: Red;
+				color: white;
+				opacity: 0.8;
+				font-size: 17px;
+				color: rgba(0,0,0,0.7);
+				width: 73px;
+				height: 33px;
+			}
+			30%{
+				background-color: Red;
+				border: 1px solid lightgreen;
+				color: white;
+				transition: 0.3s;
+				opacity: 0.7;
+				font-size: 18px;
+				color: rgba(0,0,0,0.6);
+				width: 74px;
+				height: 34px;
+			}
+			40%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				border: 1px solid lightgreen;
+				opacity: 0.6;
+				font-size: 19px;
+				color: rgba(0,0,0,0.5);
+				width: 75px;
+				height: 35px;
+			}
+			50%{
+				background-color: Red;
+				color: white;
+				opacity: 0.5;
+				border: 1px solid lightgreen;
+				transition: 0.3s;
+				font-size: 20px;
+				color: rgba(0,0,0,0.5);
+				width: 75px;
+				height: 35px;
+			}
+			60%{
+				background-color: Red;
+				color: white;
+				opacity: 0.5;
+				font-size: 19px;
+				transition: 0.3s;
+				color: rgba(0,0,0,0.6);
+				border: 1px solid lightgreen;
+				width: 74px;
+				height: 34px;
+			}
+			70%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				opacity: 0.4;
+				font-size: 18px;
+				border: 1px solid lightgreen;
+				color: rgba(0,0,0,0.7);
+				width: 73px;
+				height: 33px;
+			}
+			80%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				opacity: 0.3;
+				border: 1px solid lightgreen;
+				font-size: 17px;
+				color: rgba(0,0,0,0.8);
+				width: 72px;
+				height: 32px;
+			}
+			90%{
+				background-color: Red;
+				transition: 0.3s;
+				color: white;
+				opacity: 0.2;
+				border: 1px solid lightgreen;
+				font-size: 16px;
+				color: rgba(0,0,0,0.9);
+				width: 71px;
+				height: 31px;
+			}
+			100%{
+				background-color: Red;
+				color: white;
+				transition: 0.3s;
+				border: 1px solid lightgreen;
+				opacity: 0.1;
+				font-size: 15px;
+				color: rgba(0,0,0,1);
+				width: 70px;
+				height: 30px;
+			}
+		}
+		.markm{
+			background-color: #005ce6;
+			width: 100%;
+			height: 30px;
+			font-size: 25px;
+			color: Yellow;
+			text-shadow: 2px 5px 1px rgba(0,0,0,0.9)
+		}
+		.loc{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.locin{
+			width: 100px;
+			height: 27px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			margin-bottom: 8px;
+			align-content: center;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.locin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.phone{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.phone2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 5px;
+		}
+		.phonein{
+			width: 130px;
+			height: 26px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-top: 1px;
+			margin-left: 5px;
+			margin-bottom: 8px;
+			align-content: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		.pn91{
+			margin-left: 16px;
+			font-size: 19px;
+			margin-top: 15px;
+			font-weight: 600;
+		}
+		.pn92{
+			margin-left: 16px;
+			font-size: 19px;
+			margin-top: 15px;
+			font-weight: 600;
+		}
+		.phonein2{
+			width: 130px;
+			height: 26px;
+			color: black;
+			font-size: 15px;
+			margin: 15px 30px;
+			margin-left: 5px;
+			margin-top: 5px;
+			margin-bottom: 10px;
+			align-content: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		.ph2tit{
+			margin-top: 0px;
+			margin-bottom: 8px;
+		}
+		.phonein:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.phonein2:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.link{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.linka{
+			font-size: 20px;
+			color: Orange;
+			text-decoration: none;
+			text-shadow: 10px 7px 2px rgba(0,0,0,0.3);
+			margin-left: 20px;
+
+		}
+		.linka:hover{
+			cursor: pointer;
+			color: white;
+			text-shadow: 10px 7px 1px rgba(0,0,0,0.6);
+			transition: 0.5s;
+		}
+		.linka{
+			transition: 0.5s;
+		}
+		.Add{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.addin{
+			width: 200px;
+			height: 60px;
+			margin-left: 40px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			font-size: 10px;
+		}
+		.addin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.addtit{
+			margin-top: 27px;
+		}
+		.addin,
+		.placeholder{
+			text-align: center;
+			font-size: 20px;
+		}
+		.email{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.emailtit{
+			margin-top: 30px;
+		}
+		.emailin{
+			margin-left: 40px;
+			flex-wrap: wrap;
+			width: 180px;
+			height: 28px;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.emailin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);	
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.emailopt{
+			width: 110px;
+			height: 25px;
+			margin-left: 20px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+		}
+		.emailopt:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.state{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.sttin{
+			width: 90px;
+			margin-left: 25px;
+			height: 28px;
+			margin-top: 0px;
+			font-size: 15px;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		.sttin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.hobby{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.hobin{
+			margin-left: 30px;
+			margin-top: 1px;
+			width: 7rem;
+			height: 25px;
+			text-align: center;
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.3);
+			font-size: 15px;
+		}
+		.hobin:focus{
+			box-shadow: 10px 7px 3px rgba(0,0,0,0.6);
+			border: 2px solid rgba(200,0,0,0.9);
+			border-radius: 10%;
+			color: Red;
+			transition: 0.3s;
+		}
+		.waterMark{
+			display: fixed;
+		}
+		.warn{
+			color: Red;
+			animation: animate 0.6s linear infinite;
+		}
+		@keyframes animate{
+			0%{
+				color: white;
+			}
+			100%{
+				color: red;
+			}
+		}
+		.rm{
+			opacity: 0;
+		}
+		.rms{
+			opacity: 1;
+			color white;
+			transition: 0.6s;
+		}
+		.thankshide{
+			opacity: 0;
+		}
+		.thanksshow{
+			font-size: 20px;
+			opacity: 1;
+			color: white;
+			transition: 1s;
+		}
+		</style>
+	</head>
+	<body onload="load()">
+		<!-- onload="load()" -->
+		<h1 class="tit"><u>-:Form 2020:-</u></h1>
+		<hr style="height: 2px;background-color: black;">
+			<div class="name">
+				<h3 class="nametit">Name:-</h3>
+				<input type="text" id="firna" class="firstin" placeholder="First Name">
+				<input type="text" id="fatna" class="fathin" placeholder="Father's Name">
+				<input type="text" id="surna" class="surin" placeholder="Surname">
+			</div>
+			<br><br><br>
+			<div class="age">
+				<h3 class="agetit">Age:-</h3>
+				<input type="Number" id="age" class="agein" placeholder="Age in Number">
+				<h3 id="age2" name="age4"></h3>
+			</div>
+			<div class="birthdate">
+				<h3 class="birtit">Birthdate:-</h3>
+				<input class="birin" id="birthdate" type="date">
+			</div>
+			<div class="cast">
+				<h3 class="castit">Cast:-</h3>
+				<select class="castopt" id="cast">
+					<option>--SELECT--</option>
+					<option>OBC</option>
+					<option>SC</option>
+					<option>ST</option>
+					<option>OTHER</option>
+				</select>
+			</div>
+			<div class="loc">
+				<h3 class="loctit">Country:-</h3>
+				<input type="text" class="locin" placeholder="Country" id="country">
+			</div>
+			<div class="state">
+				<h3 class="stttin">State:-</h3>
+				<input type="text" id="state" placeholder="State" class="sttin">
+			</div>
+			<div class="phone">
+				<h3>Phone Number:-</h3>
+				<p class="pn91">+91</p><input type="text" id="phoneNumber1" placeholder="Phone Number" class="phonein">
+			</div>
+			<div class="phone2">
+				<h3 class="ph2tit">Home Phone Number:-</h3>
+				<p class="pn92">+91</p><input type="text" id="phoneNumber2" placeholder="Phone Number" class="phonein2">
+			</div>
+			<div class="Add">
+				<h3 class="addtit">Address:-</h3>
+				<input id="address" value="Junagadh" placeholder="Address" class="addin">
+			</div>
+			<div class="email">
+				<h3 class="emailtit">E-mail Address:-</h3>
+				<input class="emailin" id="emailId" placeholder="Email Address">
+				<select class="emailopt" id="emailId2">
+					<option>@gmail.com</option>
+					<option>@yahoo.com</option>
+					<option>@hotmail.com</option>
+					<option class="emailopt_1">@other(Define in box)</option>
+				</select>
+			</div>
+			<div class="hobby">
+				<h3 class="hobtit">Hobby:-</h3>
+				<input class="hobin" placeholder="Hobby" id="hobby" type="text">
+			</div>
+			<div class="Submit">
+				<button id="subbutton" class="subbut" onclick="btn()">Submit</button>
+			</div>
+			<div class="link">
+				<a class="linka" href="D:\Projects\temprature\main001.html">Check out Our Temperature Project</a>
+			</div>
+			<center><p id="thank" class="thankshide">Thanks For visiting Us.</p></center>
+			<div class="rm" id="responsemain">
+				<p>ABOUT YOU:</p><hr>
+				<div id="response">
+					<p class="response" id="RFirstName"></p>
+					<p class="response" id="RFatherName"></p>
+					<p class="response" id="RSurname"></p>
+					<p class="response" id="RFullName"></p>
+					<p class="response" id="RAge"></p>
+					<p class="response" id="RBirthDate"></p>
+					<p class="response" id="RCast"></p>
+					<p class="response" id="RCounty"></p>
+					<p class="response" id="RState"></p>
+					<p class="response" id="RPhoneNumber"></p>
+					<p class="response" id="RHomePhoneNumber"></p>
+					<p class="response" id="RAddress"></p>
+					<p class="response" id="REmail"></p>
+					<p class="response" id="RHobby"></p>
+				</div>
+			</div>
+			<script type="text/javascript">
+				function load(){
+					console.log(`=>  If you Want To Print Your Form Here:
+					1.Fill The Form Correctly
+					2.Click On the Submit Button`)
+				}
+
+				function btn(){
+					nameOutput()
+					//Name
+					function nameOutput(){
+						var firstName = firna.value;
+						var fatherName = fatna.value;
+						var surName  = surna.value;
+						var mainName = firstName + " " + fatherName + " " + surName;
+						var regex = /^[a-zA-Z]/
+						if (firstName, fatherName, surName==="") {
+							console.error("You haven't add NAME")
+							ageOutput()
+						} else {
+							if (regex.test(mainName)) {
+								console.log("Your Full Name is :- ", mainName);
+								ageOutput()
+							} else {
+								console.error("Your Name is not sufficient")
+								ageOutput()
+							}
+						}
+					}
+					//Age
+					function ageOutput(){
+						var Age = age.value;
+						var regex2 = /^[0-9]/
+						if (Age == "") {
+							console.error("You haven't add your Age");
+							birthDateOutput();
+						} else {
+							// console.log("Your Age is:- ", Age)
+							// birthDateOutput();
+							if (regex2.test(Age)) {
+								console.log("Your Age is:- ", Age)
+								birthDateOutput()
+							} else {
+								console.error("Your Age is Not sufficient")
+								birthDateOutput()
+							}
+						}
+					}
+					//Birth Date
+					function birthDateOutput(){
+						var birthDate = birthdate.value;
+						if (birthDate=="") {	
+							console.error("You haven't Add your Birth Date!!!")
+							castOutput()
+						} else {
+							console.log("Your Birthdate is:- ", birthDate);
+							castOutput();
+						}
+					}
+					//cast
+					function castOutput(){
+						var Cast = cast.value;
+						var regex3 = /^[a-zA-Z]/
+						if (Cast=="--SELECT--") {
+							console.error("You haven't choose Your Cast!!!");
+							locationOutput()
+						} else {
+							if (regex3.test(Cast)) {
+								console.log("Your Cast is:- ", Cast);
+								locationOutput()
+							} else {
+								console.error("Your Cast is not sufficient")
+								locationOutput()
+							}
+						}
+					}
+					//country
+					function locationOutput(){
+						var Loca = country.value;
+						var regex4 = /[a-zA-Z]/
+						if (Loca=="") {
+							console.error("You haven't add Your Country!!!")
+							stateOutput()
+						} else {
+							if (regex4.test(Loca)) {
+								console.log("Your Country IS:- ", Loca);
+								stateOutput()
+							} else {
+								console.error("Your Country's name is not sufficient")
+								stateOutput()
+							}
+						}
+					}
+					//state
+					function stateOutput(){
+						var State = state.value;
+						var regex5 = /[a-zA-Z]/
+						if (State=="") {
+							console.error("You haven't add Your State!!!");
+							phoneNumberOutput1();
+						} else {
+							if (regex5.test(State)) {
+								console.log("Your State is:- ", State)
+								phoneNumberOutput1();
+							} else {
+								console.error("Your State's Name is not sufficient")
+								phoneNumber1()
+							}
+						}
+					}
+					//phoneNumber 1
+					function phoneNumberOutput1(){
+						var PhoneNumber1 = phoneNumber1.value;
+						var regex6 = /[0-9]{10}$/
+						if (PhoneNumber1=="") {
+							console.error("You haven't add your phone number!!!");
+							phoneNumberOutput2();
+						} else {
+							if (regex6.test(PhoneNumber1)) {
+								console.log("Your Phone number is:- ", PhoneNumber1)
+								phoneNumberOutput2();
+							} else {
+								console.error("Your Phone Number is not sufficient")
+								phoneNumberOutput2()
+							}
+						}
+					}
+					//phoneNumber 2
+					function phoneNumberOutput2(){
+						var PhoneNumber2 = phoneNumber2.value;
+						var regex7 = /[0-9]{10}$/
+						if (PhoneNumber2=="") {
+							console.error("You Haven't add Your Home Phone Number!!!");
+							addressOutput();
+						} else {
+							if (regex7.test(PhoneNumber2)) {
+								console.log("Your Home Phone number is:- ", PhoneNumber2)
+								addressOutput();
+							} else {
+								console.error("Your Home Phone Number is not sufficient")
+								addressOutput()
+							}
+						}
+					}
+					//address
+					function addressOutput(){
+						var Address = address.value;
+						if (Address=="") {
+							console.error("You Haven't Add Your Address!!!")
+							emailIdOutput();
+						} else {
+							console.log("Your Address is:- ", Address)
+							emailIdOutput();
+						}
+					}
+					//email
+					function emailIdOutput(){
+						var EmailId = emailId.value;
+						var regex8 = /^[_\-\.0-9a-zA-Z]/
+						var EmailId2 = emailId2.value;
+						if (EmailId=="") {
+							console.error("You haven't add Your E-mail Id!!!");
+							hobbyOutput();
+						} else {
+							if (EmailId2=="@other(Define in box)") {
+								console.log("Your E-mail id is:- ", EmailId);
+								hobbyOutput();
+							} else {
+								if (regex8.test(EmailId)) {
+									console.log("Your E-mail Id is:- ", EmailId + EmailId2)
+									hobbyOutput()
+								} else {
+									console.error("Your Email Id is not sufficient")
+									hobbyOutput()
+								}
+							}
+						}
+					}
+					//hobby
+					function hobbyOutput(){
+						var Hobby = hobby.value;
+						var regex9 = /[a-zA-Z]/
+						if (Hobby=="") {
+							console.error("You haven't add Your Hobby!!!");
+							confirmState();
+						} else {
+							if (regex9.test(Hobby)) {
+								console.log("Your Hobby is:-", Hobby);	
+								confirmState();
+							} else {
+								console.error("Your Hobby is not sufficient")
+								confirmState()
+							}
+						}
+					}
+				}
+
+				function confirmState(){
+					var con = window.confirm("Do you Want to Print Your Form Detail?");
+					var rm = document.getElementById('responsemain')
+					var thank = document.getElementById('thank')
+					// console.log(con);
+					if (con===true) {
+						btn2();
+						rm.classList.add('rms');
+					} else {
+						rm.classList.remove('rms');
+						rm.classList.add('rm');
+						thank.classList.remove('thankshide');
+						thank.classList.add('thanksshow');
+					}
+				}
+			</script>
+			<script type="text/javascript">
+				function btn2(){
+					var rm = document.getElementById('responsemain')
+					rm.classList.add('rms')
+					console.log("=>Your Form detail is At last of this Page")
+					alert("Your Form detail is At last of this Page")
+				{
+					var RFirstName = document.getElementById('RFirstName')
+					var RFatherName = document.getElementById('RFatherName')
+					var RSurname = document.getElementById('RSurname')
+					var RFullName = document.getElementById('RFullName')
+					var RAge = document.getElementById('RAge')
+					var RBirthDate = document.getElementById('RBirthDate')
+					var RCast = document.getElementById('RCast')
+					var RCounty = document.getElementById('RCounty')
+					var RState = document.getElementById('RState')
+					var RPhoneNumber = document.getElementById('RPhoneNumber')
+					var RHomePhoneNumber = document.getElementById('RHomePhoneNumber')
+					var RAddress = document.getElementById('RAddress')
+					var REmail = document.getElementById('REmail')
+					var RHobby = document.getElementById('RHobby')
+				}
+				{
+					var VFirstName = document.getElementById('firna').value;
+					var VFatherName = document.getElementById('fatna').value;
+					var VSurname = document.getElementById('surna').value;
+					var VAge = document.getElementById('age').value;
+					var VBirthDate = document.getElementById('birthdate').value;
+					var VCast = document.getElementById('cast').value;
+					var VCounty = document.getElementById('country').value;
+					var VState = document.getElementById('state').value;
+					var VPhoneNumber = document.getElementById('phoneNumber1').value;
+					var VHomePhoneNumber = document.getElementById('phoneNumber2').value;
+					var VAddress = document.getElementById('address').value;
+					var VEmail = document.getElementById('emailId').value;
+					var VEmail2 = document.getElementById('emailId2').value;
+					var VHobby = document.getElementById('hobby').value;
+				}
+				firstNameR()
+				function firstNameR(){
+					var firstName = firna.value;
+						var regex = /^[a-zA-Z]/
+					if (VFirstName == "") {
+						RFirstName.innerHTML = "You Haven't add Your Age"
+						RFirstName.classList.remove('response')
+						RFirstName.classList.add('warn')
+						fatherNameR()
+						} else {
+							if (regex.test(firstName)) {
+								RFirstName.innerHTML = "Your First Name is " + VFirstName + ".";
+								fatherNameR()
+							} else {
+								RFirstName.innerHTML = "You First Name is not sufficient"
+								RFirstName.classList.remove('response')
+								RFirstName.classList.add('warn')
+								fatherNameR()
+							}
+						}
+				}
+
+				function fatherNameR(){
+						var fatherName = fatna.value;
+						var regex2 = /^[a-zA-Z]/
+					if (VFatherName == "") {
+						RFatherName.innerHTML = "You Haven't add Your father's Name"
+						RFatherName.classList.remove('response')
+						RFatherName.classList.add('warn')
+						surNameR()
+						} else {
+							if (regex2.test(fatherName)) {
+								RFatherName.innerHTML = "Your Father's Name is " + VFatherName;
+								surNameR()
+							} else {
+								RFatherName.innerHTML = "You Father's Name is not sufficient"
+								RFatherName.classList.remove('response')
+								RFatherName.classList.add('warn')
+								surNameR()
+							}
+						}
+				}
+
+				function surNameR(){
+						var surName  = surna.value;
+						var regex3 = /^[a-zA-Z]/
+					if (VSurname=="") {
+						RSurname.innerHTML = "You Haven't add Your Surame"
+						RSurname.classList.remove('response')
+						RSurname.classList.add('warn')
+						ageR()
+					} else {
+						RSurname.innerHTML = "Your surName is " + VSurname;
+						ageR()
+					}
+				}
+
+				function ageR(){
+					var Age = age.value;
+					var regex4 = /^[0-9]/
+					if (VAge == "") {
+						RAge.innerHTML = "You Haven't add Your Age"
+						RAge.classList.remove('response')
+						RAge.classList.add('warn')
+						birthDateR()
+						} else {
+							if (regex4.test(Age)) {
+								RAge.innerHTML = "Your Age is " + VAge;
+								birthDateR()
+							} else {
+								RAge.innerHTML = "You Age is not sufficient"
+								RAge.classList.remove('response')
+								RAge.classList.add('warn')
+								birthDateR()
+							}
+						}
+				}
+
+				function birthDateR(){
+
+					if (VBirthDate=="") {
+						RBirthDate.innerHTML = "You Haven't add Your birthdate"
+						RBirthDate.classList.remove('response')
+						RBirthDate.classList.add('warn')
+						castR();
+					} else {
+						RBirthDate.innerHTML = "Your birthdate is " + VBirthDate;
+						castR();
+					}
+
+				}
+
+				function castR(){
+					var Cast = cast.value;
+						if (Cast=="--SELECT--") {
+							RCast.innerHTML = "You Haven't add Your Cast"
+							RCast.classList.remove('response')
+							RCast.classList.add('warn')
+							countryR()
+						} else {
+							RCast.innerHTML = "Your Cast is " + VCast;
+							countryR()
+						}
+				}
+
+				function countryR(){
+					var Loca = country.value;
+						var regex5 = /[a-zA-Z]/
+						if (Loca=="") {
+							RCounty.innerHTML = "You Haven't add Your Country"
+							RCounty.classList.remove('response')
+							RCounty.classList.add('warn')
+							stateR()
+						} else {
+							if (regex5.test(Loca)) {
+								RCounty.innerHTML = "Your Country is " + VCounty;
+								stateR()
+
+							} else {
+								RCounty.innerHTML = "You Contry's name is not sufficient"
+								RCounty.classList.remove('response')
+								RCounty.classList.add('warn')
+								stateR()		
+							}
+						}
+				}
+
+				function stateR(){
+					var State = state.value;
+					var regex6 = /[a-zA-Z]/
+					if (State=="") {
+						RState.innerHTML = "You havn't add Your State"
+						RState.classList.remove('response')
+						RState.classList.add('warn')
+						phoneNumber1R()
+					} else {
+						if (regex6.test(State)) {
+							RCounty.innerHTML = "Your Contry is " + VState;
+							phoneNumber1R()
+						} else {
+							RState.innerHTML = "Your State Name is not sufficient"
+							RState.classList.remove('response')
+							RState.classList.add('warn')
+							phoneNumber1R()
+						}
+					}
+				}
+
+				function phoneNumber1R(){
+					var PhoneNumber1 = phoneNumber1.value;
+						var regex7 = /[0-9]{10}$/
+						if (PhoneNumber1=="") {
+							RPhoneNumber.innerHTML = "You haven't add your Phone Number"
+							RPhoneNumber.classList.remove('response');
+							RPhoneNumber.classList.add('warn');
+							phoneNumber2R()
+						} else {
+							if (regex7.test(PhoneNumber1)) {
+								RPhoneNumber.innerHTML = "Your Phone Number is +91 " + VPhoneNumber;
+								phoneNumber2R()
+							} else {
+								RPhoneNumber.innerHTML = "Your Phone Number is not sufficient"
+								RPhoneNumber.classList.remove('response');
+								RPhoneNumber.classList.add('warn');
+								phoneNumber2R()
+							}
+						}	
+				}
+
+				function phoneNumber2R(){
+					var PhoneNumber2 = phoneNumber2.value;
+						var regex8 = /[0-9]{10}$/
+						if (PhoneNumber2=="") {
+							RHomePhoneNumber.innerHTML = "You haven't add your Home Phone Number"
+							RHomePhoneNumber.classList.remove('response');
+							RHomePhoneNumber.classList.add('warn');
+							addressR()
+						} else {
+							if (regex8.test(PhoneNumber2)) {
+								RHomePhoneNumber.innerHTML = "Your Home Phone Number is +91 " + VHomePhoneNumber;
+								addressR()
+							} else {
+								RHomePhoneNumber.innerHTML = "Your Home Phone Number is not sufficient"
+								RHomePhoneNumber.classList.remove('response');
+								RHomePhoneNumber.classList.add('warn');
+								addressR()
+							}
+						}	
+				}
+
+
+				function addressR(){
+					var Address = address.value;
+						if (Address=="") {
+							RAddress.innerHTML = "You Haven't add Your Address";
+							RAddress.classList.remove('response');
+							RAddress.classList.add('warn')
+							emailR()
+						} else {
+							RAddress.innerHTML = "Your Address is " + VAddress;
+							emailR()
+						}
+				}
+
+				function emailR(){
+					var EmailId = emailId.value;
+						var regex8 = /^[_\-\.0-9a-zA-Z]/
+						var EmailId2 = emailId2.value;
+						if (EmailId=="") {
+							REmail.innerHTML = "You Haven't add Your Email Id";
+							REmail.classList.remove('response');
+							REmail.classList.add('warn')
+							hobbyR()
+						} else {
+							if (EmailId2=="@other(Define in box)") {
+								REmail.innerHTML = "Your Email Id is " + VEmail;
+								hobbyR()
+							} else {
+								if (regex8.test(EmailId)) {
+									REmail.innerHTML = "Your Email is " + VEmail + VEmail2;
+									hobbyR()
+								} else {
+									REmail.innerHTML = "Your Email Id is Not sufficient";
+									REmail.classList.remove('response');
+									REmail.classList.add('warn')
+									hobbyR()
+								}
+							}
+						} 
+				}
+
+				function hobbyR(){
+					var Hobby = hobby.value;
+						var regex9 = /[a-zA-Z]/
+						if (Hobby=="") {
+							RHobby.innerHTML = "You haven't add Your Hobby";
+							RHobby.classList.remove('response');
+							RHobby.classList.add('warn')
+						} else {
+							if (regex9.test(Hobby)) {
+								RHobby.innerHTML = "Your Hobby is " + VHobby;
+							} else {
+								RHobby.innerHTML = "Your Hobby is not sufficient";
+								RHobby.classList.remove('response');
+								RHobby.classList.add('warn')
+							}
+						}
+				}
+				}
+			</script>
+	</body>
+</html>

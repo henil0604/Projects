@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom News</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">	
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Welcome to World News</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="main2.html">Custom News</a>
+          </li>
+        </ul>
+       </div>
+    </nav>
+	<div class="container my-5">
+		<div id="refrash">
+	        <a onclick="newsF()" alt="Refresh">
+          		<img class="refreshMain" src="refresh.png">
+	        </a>
+      	</div>
+		<div class="custom" id="custom">
+	        <p class="customTit">Enter URL(JSON) : </p>
+	        <input type="url" id="urlInput" class="form-control" placeholder="Enter URL" aria-label="URL" aria-describedby="basic-addon1">
+	        <button class="btn btn-primary my-2" id="customButton" onclick="newsF()">Submit</button>
+	        <br>
+	        <br>
+	        <div class="accordion" id="newsAccordian6"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main6.js"></script>
+</body>
+</html>

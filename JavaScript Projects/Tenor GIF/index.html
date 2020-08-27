@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    // url Async requesting function
+    function httpGetAsync(theUrl, callback) {
+        // create the request object
+        var xmlHttp = new XMLHttpRequest();
+
+        // set the state change callback to capture when the response comes in
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                callback(xmlHttp.responseText);
+            }
+        }
+
+        // open as a GET call, pass in the url and set async = True
+        xmlHttp.open("GET", theUrl, true);
+
+        // call send with no params as they were passed in on the url string
+        xmlHttp.send(null);
+
+        return;
+    }
+
+    // callback for share event
+    function tenorCallback_autocomplete(responsetext) {
+        var response_objects = JSON.parse(responsetext);
+
+        predicted_words = response_objects["results"];
+
+        document.getElementById("ac_1").innerHTML = predicted_words[0];
+        document.getElementById("ac_2").innerHTML = predicted_words[1];
+    }
+
+    // SUPPORT FUNCTIONS ABOVE
+    // MAIN BELOW
+
+    //partial search term
+    psearch_term = "exc";
+
+    // set the apikey and limit
+    var apikey = "LIVDSRZULELA";
+    var lmt = 5;
+
+    // using default locale of en_US
+    var autoc_url = "https://api.tenor.com/v1/autocomplete?key=" + apikey + "&q=" + psearch_term
+        + "&limit=" + lmt;
+
+    // send autocomplete request
+    httpGetAsync(autoc_url, tenorCallback_autocomplete);
+
+
+</script>
+
+<body>
+
+    <h2>Partial Search "exc":</h2>
+    <h3 id="ac_1"></h3>
+    <h3 id="ac_2"></h3>
+
+</body>
+
+</html>
