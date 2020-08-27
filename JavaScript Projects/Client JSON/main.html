@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Name</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body onload="main()">
+    <table class="table" id="table">
+        <thead class="thead-dark">
+            <tr id="head1">
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Company</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">isActive</th>
+                <th scope="col">Address</th>
+            </tr>
+        </thead>
+        <tbody id="body1">
+            <tr id="tr1"></tr>
+            <tr id="tr2"></tr>
+            <tr id="tr3"></tr>
+            <tr id="tr4"></tr>
+            <tr id="tr5"></tr>
+            <tr id="tr6"></tr>
+        </tbody>
+    </table>
+
+
+
+    <script>
+        var json =
+        {
+            "clients": [
+                {
+                    "id": "59761c23b30d971669fb42ff",
+                    "isActive": true,
+                    "age": 36,
+                    "name": "Dunlap Hubbard",
+                    "gender": "male",
+                    "company": "CEDWARD",
+                    "email": "dunlaphubbard@cedward.com",
+                    "phone": "+1 (890) 543-2508",
+                    "address": "169 Rutledge Street, Konterra, Northern Mariana Islands, 8551"
+                },
+                {
+                    "id": "59761c233d8d0f92a6b0570d",
+                    "isActive": true,
+                    "age": 24,
+                    "name": "Kirsten Sellers",
+                    "gender": "female",
+                    "company": "EMERGENT",
+                    "email": "kirstensellers@emergent.com",
+                    "phone": "+1 (831) 564-2190",
+                    "address": "886 Gallatin Place, Fannett, Arkansas, 4656"
+                },
+                {
+                    "id": "59761c23fcb6254b1a06dad5",
+                    "isActive": false,
+                    "age": 30,
+                    "name": "Acosta Robbins",
+                    "gender": "male",
+                    "company": "ORGANICA",
+                    "email": "acostarobbins@organica.com",
+                    "phone": "+1 (882) 441-3367",
+                    "address": "697 Linden Boulevard, Sattley, Idaho, 1035"
+                },
+                {
+                    "id": "59761c233d8d0f92a6b0570d",
+                    "isActive": true,
+                    "age": 24,
+                    "name": "Kirsten Sellers",
+                    "gender": "female",
+                    "company": "EMERGENT",
+                    "email": "kirstensellers@emergent.com",
+                    "phone": "+1 (831) 564-2190",
+                    "address": "886 Gallatin Place, Fannett, Arkansas, 4656"
+                }
+            ]
+        }
+
+
+        function main() {
+            var count = 0;
+            var i = 0;
+            var table = document.getElementById('table');
+            var head1 = document.getElementById('head1');
+            var body1 = document.getElementById('body1');
+            var tr1 = document.getElementById('tr1');
+            var tr2 = document.getElementById('tr2');
+            var tr3 = document.getElementById('tr3');
+            var tr4 = document.getElementById('tr4');
+            var tr5 = document.getElementById('tr5');
+            var tr6 = document.getElementById('tr6');
+            var no = document.getElementById('no')
+
+
+
+
+
+            tr1.innerHTML = `
+                <th scope="row" id="no">${++i}</th>
+                <td>${json.clients[count].id}</td>
+                <td>${json.clients[count].name}</td>
+                <td>${json.clients[count].age}</td>
+                <td>${json.clients[count].gender}</td>
+                <td>${json.clients[count].company}</td>
+                <td>${json.clients[count].email}</td>
+                <td>${json.clients[count].phone}</td>
+                <td>${json.clients[count].isActive}</td>
+                <td>${json.clients[count].address}</td>
+            `
+
+            tr2.innerHTML = `
+                <th scope="row" id="no">${++i}</th>
+                <td>${json.clients[++count].id}</td>
+                <td>${json.clients[count].name}</td>
+                <td>${json.clients[count].age}</td>
+                <td>${json.clients[count].gender}</td>
+                <td>${json.clients[count].company}</td>
+                <td>${json.clients[count].email}</td>
+                <td>${json.clients[count].phone}</td>
+                <td>${json.clients[count].isActive}</td>
+                <td>${json.clients[count].address}</td>
+            `
+
+            tr3.innerHTML = `
+                <th scope="row" id="no">${++i}</th>
+                <td>${json.clients[++count].id}</td>
+                <td>${json.clients[count].name}</td>
+                <td>${json.clients[count].age}</td>
+                <td>${json.clients[count].gender}</td>
+                <td>${json.clients[count].company}</td>
+                <td>${json.clients[count].email}</td>
+                <td>${json.clients[count].phone}</td>
+                <td>${json.clients[count].isActive}</td>
+                <td>${json.clients[count].address}</td>
+            `
+
+
+            tr4.innerHTML = `
+                <th scope="row" id="no">${++i}</th>
+                <td>${json.clients[++count].id}</td>
+                <td>${json.clients[count].name}</td>
+                <td>${json.clients[count].age}</td>
+                <td>${json.clients[count].gender}</td>
+                <td>${json.clients[count].company}</td>
+                <td>${json.clients[count].email}</td>
+                <td>${json.clients[count].phone}</td>
+                <td>${json.clients[count].isActive}</td>
+                <td>${json.clients[count].address}</td>
+            `
+
+        }
+
+
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Corona Map</title>
+
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .time {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 99999;
+            color: white;
+        }
+
+        .link {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='map'></div>
+    <h3 class="time"></h3>
+    <a class="link" href="CoronaDetail.html">Get Detailed Information</a>
+
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGVuaWxtYWxhdml5YSIsImEiOiJjazhhYWRtNWkwMGNzM21tanNpbmlzd2F2In0.O9N-sYbxui39aj2pHgQF6w';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1,
+        center: [0, 20]
+    });
+</script>
+
+<script>
+    let dt = new Date(new Date().setTime(60))
+    let time = dt.getTime()
+
+    let myTime = setInterval(function () {
+        time -= 1
+
+        let mainTimer = `Map Reloding in ${time} seconds`
+        document.querySelector(".time").innerHTML = mainTimer;
+
+        if (time == 0) {
+            time = 61
+            updateMap()
+        }
+    }, 1000)
+
+</script>
+
+<script src="http://127.0.0.1:5500/index.js"></script>
+
+</html>
+
+
+
+<!-- 2r4vPgnV4vNNrfWJ75W! -->

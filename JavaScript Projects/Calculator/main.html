@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="D:\Programming Languages\JavaScript Projects\Calculator\main.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="screen-div">
+            <input type="text" spellcheck="false" class="screen" id="screen">
+        </div>
+        <div class="button-div">
+            <button onclick="C()" value="AC" class="button" accesskey="a">AC</button>
+            <button onclick="Del()" value="Del" class="button" accesskey="b"><i class="fas fa-backspace"></i></button>
+            <button onclick="btnClick('+')" value="+" class="button" accesskey="+">+</button>
+            <button onclick="btnClick('-')" value="-" class="button" accesskey="-">-</button>
+            <button onclick="btnClick('7')" value="7" class="button" accesskey="7">7</button>
+            <button onclick="btnClick('8')" value="8" class="button" accesskey="8">8</button>
+            <button onclick="btnClick('9')" value="9" class="button" accesskey="9">9</button>
+            <button onclick="btnClick('*')" value="*" class="button" accesskey="*">*</button>
+            <button onclick="btnClick('6')" value="6" class="button" accesskey="6">6</button>
+            <button onclick="btnClick('5')" value="5" class="button" accesskey="5">5</button>
+            <button onclick="btnClick('4')" value="4" class="button" accesskey="4">4</button>
+            <button onclick="btnClick('/')" value="/" class="button" accesskey="/">/</button>
+            <button onclick="btnClick('1')" value="1" class="button" accesskey="1">1</button>
+            <button onclick="btnClick('2')" value="2" class="button" accesskey="2">2</button>
+            <button onclick="btnClick('3')" value="3" class="button" accesskey="3">3</button>
+            <button onclick="btnClick('^')" value="^" class="button" accesskey="^">^</button>
+            <button onclick="btnClick('0')" value="0" class="button" accesskey="0">0</button>
+            <button onclick="btnClick('00')" value="00" class="button" accesskey="d">00</button>
+            <button onclick="btnClick('.')" value="." class="button" accesskey=".">.</button>
+            <button onclick="equal()" value="=" class="button" accesskey="=">=</button>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script src="D:\Programming Languages\JavaScript Projects\Calculator\main.js"></script>
+
+    <!-- Icon Script -->
+    <script src="https://kit.fontawesome.com/23a0a9f173.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

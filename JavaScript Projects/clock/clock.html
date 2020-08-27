@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Alarm Clock</title>
+</head>
+
+<body onload="updateClock(); setInterval('updateClock()', 1000)">
+	<div class="Date">
+		<h1 class="Clock" id="clock"></h1>
+	</div>
+	<br>
+	<div id="feedBack">
+		PLEASE GIVE YOUR FEEDBACK:-<input type="text" id="feedBackInput">
+		<br>
+		<br>
+		<button type="Button" onclick="feedBack()">Submitt</button>
+		<br><br>
+		<hr>
+		<h2>
+			Your FeedBack:-
+		</h2>
+		<hr>
+		<h3 class="feedOut" id="feedBackOutput"></h3>
+	</div>
+	<script src="clock.js" type="text/javascript"></script>
+</body>
+
+</html>

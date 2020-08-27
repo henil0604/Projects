@@ -1,0 +1,92 @@
+body{
+	background-color: skyblue;
+	transition: 1s;
+	width: 99%;
+}
+
+.mh{
+	font-size: 30px;
+	color: Red;
+	text-shadow: 4px 6px 3px rgba(0,0,0,0.4);
+}
+.mh:hover{
+	color: white;
+	text-shadow: 4px 6px 1px rgba(0,0,0,0.4);
+	font-size: 32px;
+	transition: 0.2s;
+}
+.mh{
+	transition: 0.2s;
+}
+.main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 90px;
+}
+.card{
+	align-items: center;
+	text-align: center;
+	border-radius: 33px;
+	justify-content: center;
+	margin-top: 100px;
+	color: Blue;
+	width: 180px;
+	height: 200px;
+	background-color: lightgreen;
+}
+.card:hover{
+	transition: 0.1s;
+	background-color: black;
+	color: lightgreen;
+}
+.card{
+	transition: 1s;
+}
+.date{
+	text-align: center;
+	font-size: 70px;
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-top: 0px;
+}
+.day{
+	font-size: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-weight: 600;
+}
+.month{
+	font-size: 20px;
+	font-weight: 600;
+	margin-top: 0px;
+	margin-bottom: 0;
+}
+.year{
+	margin-top: 4px;
+	font-size: 22px;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+.time{
+	margin-top: 6px;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.date:hover,
+.day:hover,
+.month:hover,
+.year:hover,
+.time:hover{
+	color: white;
+	transition: 0.4s;
+}
+.date,
+.day,
+.month,
+.year,
+.time{
+	transition: 0.5s;
+}
